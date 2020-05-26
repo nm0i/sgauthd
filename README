@@ -1,0 +1,23 @@
+This is an auth daemon to be run under inet.d.
+
+Accepts username and password, returns OK: role
+
+Service file:
+
+service sgauthd
+{
+        disable         = no
+        port            = 4017
+        socket_type     = stream
+        user            = sg
+        protocol        = tcp
+        wait            = no
+        instances       = 5
+        only_from       = 127.0.0.1
+        server          = /usr/bin/timeout
+        server_args     = 1s /s/sg/var/authd/crypt.tcl
+        log_type        = SYSLOG daemon debug
+}
+
+Don't forget to make an entry in /etc/services
+
