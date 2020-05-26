@@ -1,0 +1,8 @@
+services:
+    auth.provider.sgauthd:
+        class: sg\sgauthd\auth\provider\sgauthd
+        arguments:
+            - '@dbal.conn'
+        tags:
+            - { name: auth.provider }
+

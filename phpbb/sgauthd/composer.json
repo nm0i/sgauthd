@@ -1,0 +1,27 @@
+{
+	"name": "sg/sgauthd",
+	"type": "phpbb-extension",
+	"description": "SG Authd connector",
+	"homepage": "https://shadowgate.org",
+	"version": "0.0.1",
+	"keywords": ["phpbb", "extension", "sg"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "ilmarinen",
+			"email": "ilmarinen@shadowgate.org",
+			"homepage": "https://shadowgate.org"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"phpbb/phpbb": ">=3.2.0",
+		"composer/installers": "~1.0"
+	},
+	"extra": {
+		"display-name": "SGAuthd",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.2.0,<3.3"
+		}
+	}
+}
