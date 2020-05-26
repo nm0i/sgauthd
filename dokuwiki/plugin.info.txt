@@ -1,0 +1,7 @@
+base   authsg
+author ilmarinen
+email  ilmarinen@shadowgate.org
+date   2020-04-26
+name   SG Auth Plugin
+desc   Provides user authentication against SG
+url    https://shadowgate.org/
