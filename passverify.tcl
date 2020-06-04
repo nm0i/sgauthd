@@ -18,6 +18,7 @@ proc verifyPass {user passwd} {
 
     foreach elem $splitCont {
         regexp {^password "(.*)"} $elem -> hash
+        regexp {^position "(.*)"} $elem -> position
     }
 
     if {! [info exists hash]} {
