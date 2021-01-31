@@ -15,7 +15,7 @@ while {[gets stdin line] >= 0} {
         set in_auth 1
         puts "334 [::base64::encode Username:]"
     } elseif {$in_auth==1} {
-        set uname [::base64::decode $line]
+        set uname [regsub {@.*} [::base64::decode $line] ""]
         set in_auth 2
         puts "334 [::base64::encode Password:]"
     } elseif {$in_auth==2} {
